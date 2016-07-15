@@ -121,7 +121,7 @@ int main()
 	}
 	else if(schoice ==1)
 	{
-		cout<<"1.Convert to greyscale"<<endl<<"2.Detect faces"<<"Enter choice:";
+		cout<<"1.Convert to greyscale"<<endl<<"2.Detect faces"<<endl<<"Enter choice:";
 		int choice;
 		cin>>choice;
 		if(choice==1 || choice==2)
