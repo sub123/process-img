@@ -2,6 +2,7 @@
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
+#include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -54,6 +55,25 @@ void face_detect(Mat img)
 	}
 	waitKey(0);
 }
+void cam()
+{
+	VideoCapture cap(0);
+	if(!cap.isOpened())
+	{
+		cout<<"Could not open camera."<<endl;
+		return;
+	}
+	while(1)
+	{
+		Mat frame;
+		cap>>frame;
+		imshow("video",frame);
+		if(waitKey(30)=='c')
+		{
+			break;
+		}
+	}
+}
 int main()
 {
 	cout<<"1.Convert to greyscale"<<endl<<"2.Detect faces"<<endl<<"3.Use camera"<<endl<<"Enter choice:";
@@ -71,7 +91,7 @@ int main()
 		Mat img=imread(path,CV_LOAD_IMAGE_COLOR);
 		if(!img.data)
 		{
-			cout<<"Could not load image.";
+			cout<<"Could not load image."<<endl;
 			return -1;
 		}
 		if(choice==1)
