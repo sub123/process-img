@@ -17,6 +17,8 @@ opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
 -
+opencv2/objdetect/objdetect.hpp
+-
 
 /usr/local/include/opencv2/core/core.hpp
 opencv2/core/types_c.h
@@ -119,4 +121,12 @@ opencv2/imgproc/types_c.h
 /usr/local/include/opencv2/imgproc/types_c.h
 opencv2/core/core_c.h
 /usr/local/include/opencv2/imgproc/opencv2/core/core_c.h
+
+/usr/local/include/opencv2/objdetect/objdetect.hpp
+opencv2/core/core.hpp
+/usr/local/include/opencv2/objdetect/opencv2/core/core.hpp
+map
+-
+deque
+-
 
